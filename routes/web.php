@@ -37,3 +37,13 @@ Route::get('/article/{id}', function ($id) {
     echo "This is Article Pages with ID : ".$id;
     });
 
+
+//Practice 2
+//Number 1
+Route::get('/index', [PageController::class, 'index']);
+
+//Number 2
+Route::get('/about', [PageController::class, 'about']);
+
+//Number 3
+Route::get('/articles/{id}', [PageController::class, 'articles']);
