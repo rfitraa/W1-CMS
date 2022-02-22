@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    echo "Hi! Welcome to Laravel";
+    });
+
+Route::get('/about', function () {
+    echo "NIM : 204172054 <br>";
+    echo "Name : Rabiatul Fitra Aulia <br>";
+    echo "Class : TI-2I";
+    });
+
+Route::get('/article/{id}', function ($id) {
+    echo "This is Article Pages with ID : ".$id;
+    });
+
