@@ -18,16 +18,20 @@ use App\Http\Controllers\WelcomeController;
 //     return view('welcome');
 // });
 
+// Practice 1
+// Number 1
 Route::get('/', function () {
     echo "Hi! Welcome to Laravel";
     });
 
+//Number 2
 Route::get('/about', function () {
     echo "NIM : 204172054 <br>";
     echo "Name : Rabiatul Fitra Aulia <br>";
     echo "Class : TI-2I";
     });
 
+//Number 3
 Route::get('/article/{id}', function ($id) {
     echo "This is Article Pages with ID : ".$id;
     });
