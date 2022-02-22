@@ -40,7 +40,7 @@ Route::get('/article/{id}', function ($id) {
 
 //Practice 2
 //Number 1
-Route::get('/index', [PageController::class, 'index']);
+Route::get('/', [PageController::class, 'index']);
 
 //Number 2
 Route::get('/about', [PageController::class, 'about']);
