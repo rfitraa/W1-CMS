@@ -117,3 +117,7 @@ Route::group(['prefix' => '/program'], function(){
 Route::get('/about-us', function () {
     return 'RABIATUL FITRA AULIA | 2041720154 | TI-2I';
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
