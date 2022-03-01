@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,64 +61,76 @@ use App\Http\Controllers\ArticleController;
 
 //Practice 3
 //Home
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-//Products
-Route::group(['prefix' => '/products'], function(){
+// //Products
+// Route::group(['prefix' => '/products'], function(){
 
-    Route::get('/marbel-edu-games', function(){
-        return 'MARBEL EDU GAMES';
-    });
+//     Route::get('/marbel-edu-games', function(){
+//         return 'MARBEL EDU GAMES';
+//     });
 
-    Route::get('/marbel-and-friends-kids-game', function(){
-        return 'MARBEL AND FRIENDS KIDS GAME';
-    });
+//     Route::get('/marbel-and-friends-kids-game', function(){
+//         return 'MARBEL AND FRIENDS KIDS GAME';
+//     });
     
-    Route::get('/riri-story-book', function(){
-        return 'RIRI STORY BOOK';
-    });
+//     Route::get('/riri-story-book', function(){
+//         return 'RIRI STORY BOOK';
+//     });
 
-    Route::get('/kolak-kids-song', function(){
-        return 'KOLAK KIDS SONGS';
-    });
-});
+//     Route::get('/kolak-kids-song', function(){
+//         return 'KOLAK KIDS SONGS';
+//     });
+// });
 
-//News
-Route::group(['prefix' => '/news'], function(){
+// //News
+// Route::group(['prefix' => '/news'], function(){
 
-    Route::get('/', function(){
-        return 'NEWS PAGE';
-    });
+//     Route::get('/', function(){
+//         return 'NEWS PAGE';
+//     });
 
-    Route::get('/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19', function(){
-        return 'EDUCA STUDIO BERBAGI UNTUK WARGA SEKITAR TERDAMPAK COVID-19';
-    });
-});
+//     Route::get('/educa-studio-berbagi-untuk-warga-sekitarterdampak-covid-19', function(){
+//         return 'EDUCA STUDIO BERBAGI UNTUK WARGA SEKITAR TERDAMPAK COVID-19';
+//     });
+// });
 
 
-//Program
-Route::group(['prefix' => '/program'], function(){
+// //Program
+// Route::group(['prefix' => '/program'], function(){
 
-    Route::get('/karir', function(){
-        return 'PROGRAM KARIR';
-    });
+//     Route::get('/karir', function(){
+//         return 'PROGRAM KARIR';
+//     });
 
-    Route::get('/magang', function(){
-        return 'PROGRAM MAGANG';
-    });
+//     Route::get('/magang', function(){
+//         return 'PROGRAM MAGANG';
+//     });
     
-    Route::get('/kunjungan-industri', function(){
-        return 'KUNJUNGAN INDUSTRI';
-    });
-});
+//     Route::get('/kunjungan-industri', function(){
+//         return 'KUNJUNGAN INDUSTRI';
+//     });
+// });
 
-//About Us
-Route::get('/about-us', function () {
-    return 'RABIATUL FITRA AULIA | 2041720154 | TI-2I';
-});
+// //About Us
+// Route::get('/about-us', function () {
+//     return 'RABIATUL FITRA AULIA | 2041720154 | TI-2I';
+// });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
