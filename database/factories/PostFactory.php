@@ -13,8 +13,10 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        $name = $this->faker->sentence;
         return [
-            //
+            'name' => $name,
+            'description' => $this->faker->realText(),
         ];
     }
 }
