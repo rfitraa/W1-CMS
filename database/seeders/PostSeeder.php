@@ -15,8 +15,8 @@ class PostSeeder extends Seeder
     public function run()
     {
         DB::table('posts')->insert([
-            'name' => 'LAMB TIKKA SPECIAL',
-            'description' => 'Tender pieces of lamb mixed with our own spices and gently cooked in clay oven.'
+            'title' => 'Tata Trying Jobsheet 4',
+            'description' => 'Bismillah ini yang kedua'
             ]);
     }
 }

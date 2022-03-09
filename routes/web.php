@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -127,9 +128,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     return view('about');
+// });
+
+Route::get('/about', [PostController::class, 'index']);
 
 Route::get('/contact', function () {
     return view('contact');
