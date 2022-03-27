@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.restourant')
 
 @section('content')
 <div class="container">
@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body mb-3 mt-3">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -51,9 +51,9 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
+                        <div class="row mb-5">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btn-login">
                                     {{ __('Login') }}
                                 </button>
 
