@@ -12,4 +12,5 @@
             <input type="file" class="form-control" required="required" name="image"></br>
             <button type="submit" name="submit" class="btn btn-primary float-right">Save</button>
         </div>
-    </form @endsection
+</form>
+@endsection
