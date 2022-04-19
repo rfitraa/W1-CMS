@@ -5,6 +5,11 @@
     <p>{{ $message }}</p>
 </div>
 @endif
+<div class="row">
+    <div style="margin:0px 0px 0px 70px;" class="mb-3">
+        <a href="{{ route('print_pdf') }}" class="btn btn-success">Print PDF</a>
+    </div>
+</div>
 <table class="table table-bordered" style="width: 95%; margin:0 auto;">
     <tr>
         <th>Title</th>

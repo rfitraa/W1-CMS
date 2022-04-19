@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 class ArticleController extends Controller
 {
@@ -110,5 +111,12 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+
+    public function print_pdf(){
+        $articles = Article::all();
+        // $pdf = PDF::loadView('articles.articles_pdf', ['articles' => $articles]);
+        $pdf = PDF::loadFile('articles.articles_pdf', ['articles' => $articles]);
+        return $pdf->stream();
     }
 }

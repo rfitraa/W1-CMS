@@ -40,3 +40,5 @@ Route::get('/contact', function () {
 Route::get('/home', [HomeController::class, 'index']);
 
 Route::resource('articles', ArticleController::class);
+
+Route::get('/article/print_pdf',[ArticleController::class, 'print_pdf'])->name('print_pdf');
