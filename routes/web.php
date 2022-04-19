@@ -38,3 +38,5 @@ Route::get('/contact', function () {
 });
 
 Route::get('/home', [HomeController::class, 'index']);
+
+Route::resource('articles', ArticleController::class);
